@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/bookstore_db
+    username: root
+    password: 6505162a6505162a
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
