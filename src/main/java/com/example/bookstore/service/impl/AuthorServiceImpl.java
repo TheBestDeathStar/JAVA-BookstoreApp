@@ -49,7 +49,7 @@ public class AuthorServiceImpl implements AuthorService {
         Author existingAuthor = authorRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Author not found with id: " + id));
 
-        // Update existingAuthor fields based on authorDto
+
 
         Author updatedAuthor = authorRepository.save(existingAuthor);
         return authorMapper.toDto(updatedAuthor);

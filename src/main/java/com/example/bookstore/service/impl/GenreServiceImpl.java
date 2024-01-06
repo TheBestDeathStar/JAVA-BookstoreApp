@@ -49,7 +49,7 @@ public class GenreServiceImpl implements GenreService {
         Genre existingGenre = genreRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Genre not found with id: " + id));
 
-        // Update existingGenre fields based on genreDto
+
 
         Genre updatedGenre = genreRepository.save(existingGenre);
         return genreMapper.toDto(updatedGenre);

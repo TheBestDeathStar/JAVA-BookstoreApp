@@ -49,7 +49,7 @@ public class CustomerServiceImpl implements CustomerService {
         Customer existingCustomer = customerRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Customer not found with id: " + id));
 
-        // Update existingCustomer fields based on customerDto
+
 
         Customer updatedCustomer = customerRepository.save(existingCustomer);
         return customerMapper.toDto(updatedCustomer);

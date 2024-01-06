@@ -49,7 +49,7 @@ public class PublisherServiceImpl implements PublisherService {
         Publisher existingPublisher = publisherRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Publisher not found with id: " + id));
 
-        // Update existingPublisher fields based on publisherDto
+
 
         Publisher updatedPublisher = publisherRepository.save(existingPublisher);
         return publisherMapper.toDto(updatedPublisher);
